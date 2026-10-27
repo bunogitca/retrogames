@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroGames - Catálogo Virtual</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🕹️ RetroGames</h1>
+        <p>Gerencie e relembre os maiores clássicos da história dos videogames.</p>
+    </header>
+
+    <main>
+        <div class="main-header">
+            <h2>Catálogo de Jogos</h2>
+            <button id="btn-abrir-modal" class="btn-primary">+ Cadastrar Jogo</button>
+        </div>
+
+        <div id="estado-vazio" class="empty-state">
+            <p>Nenhum jogo cadastrado no momento.</p>
+        </div>
+
+        <section id="grid-jogos" class="games-grid"></section>
+    </main>
+
+    <dialog id="modal-cadastro">
+        <div class="modal-content">
+            <h3>Cadastrar Novo Jogo</h3>
+            <form id="form-jogo">
+                <div class="form-group">
+                    <label for="titulo">Título</label>
+                    <input type="text" id="titulo" required placeholder="Ex: Chrono Trigger">
+                </div>
+
+                <div class="form-group">
+                    <label for="plataforma">Plataforma</label>
+                    <input type="text" id="plataforma" required placeholder="Ex: SNES, Mega Drive">
+                </div>
+
+                <div class="form-group">
+                    <label for="desenvolvedora">Desenvolvedora</label>
+                    <input type="text" id="desenvolvedora" required placeholder="Ex: Squaresoft">
+                </div>
+
+                <div class="form-group">
+                    <label for="imagem_url">URL da Imagem</label>
+                    <input type="url" id="imagem_url" required placeholder="https://exemplo.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="preco">Preço (R$)</label>
+                    <input type="number" id="preco" step="0.01" min="0" required placeholder="0.00">
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" id="btn-cancelar" class="btn-secondary">Cancelar</button>
+                    <button type="submit" class="btn-primary">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
